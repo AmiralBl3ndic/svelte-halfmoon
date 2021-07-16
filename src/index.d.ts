@@ -1,0 +1,6 @@
+type ButtonVariant = "primary"
+    | "secondary"
+    | "success"
+    | "link"
+    | "danger"
+    | ""
