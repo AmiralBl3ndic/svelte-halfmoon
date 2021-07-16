@@ -5,7 +5,6 @@
   export let large: boolean = false;
   export let small: boolean = false;
   export let block: boolean = false;
-  export let darkMode: boolean = false;
   export let disabled: boolean = false;
   export let active: boolean = false;
   export let square: boolean = false;
@@ -22,12 +21,15 @@
     dispatch("dblclick", e);
   };
 
+  if (circle) {
+    square = true;
+  }
+
   const btnClasses = `btn${variant !== "" ? ` btn-${variant}` : ""}`;
 </script>
 
 <button
   type="button"
-  class:dark-mode={darkMode}
   class={btnClasses}
   class:btn-lg={large}
   class:btn-sm={small}
