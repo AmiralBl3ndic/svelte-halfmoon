@@ -1,14 +1,49 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte";
 
+  /**
+   * Color variant of the button
+   */
   export let variant: ButtonVariant = "";
+
+  /**
+   * Use the `btn-lg` variant of the button
+   */
   export let large: boolean = false;
+
+  /**
+   * Use the `btn-sm` variant of the button
+   */
   export let small: boolean = false;
+
+  /**
+   * Use the `btn-block` variant of the button
+   */
   export let block: boolean = false;
+
+  /**
+   * Disable the button
+   */
   export let disabled: boolean = false;
+
+  /**
+   * Mark the button as active
+   */
   export let active: boolean = false;
+
+  /**
+   * Make the button a square
+   */
   export let square: boolean = false;
+
+  /**
+   * Round corners of the button
+   */
   export let rounded: boolean = false;
+
+  /**
+   * Make the button a circle
+   */
   export let circle: boolean = false;
 
   const dispatch = createEventDispatcher();

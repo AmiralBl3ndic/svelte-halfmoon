@@ -1,11 +1,8 @@
 <script>
   import { Meta, Template, Story } from "@storybook/addon-svelte-csf";
+  import { action } from "@storybook/addon-actions";
   import Button from "../../components/Button.svelte";
   import DarkModeWrapper from "../DarkModeWrapper.svelte";
-
-  function logClicks(message) {
-    return () => console.log(message);
-  }
 </script>
 
 <Meta title="Svelte Halfmoon/Button" component={Button} />
@@ -14,9 +11,8 @@
   <DarkModeWrapper>
     <Button
       {...args}
-      on:click={args.onClick || logClicks("single click")}
-      on:dblclick={args.onDblclick || logClicks("double click")}
-      >{args.content}</Button
+      on:click={action("on:click")}
+      on:dblclick={action("on:dblclick")}>{args.content}</Button
     >
   </DarkModeWrapper>
 </Template>
