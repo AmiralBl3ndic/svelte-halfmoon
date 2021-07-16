@@ -1,6 +1,6 @@
 <script>
   import { Meta, Template, Story } from "@storybook/addon-svelte-csf";
-  import Button from "../../Button.svelte";
+  import Button from "../../components/Button.svelte";
   import DarkModeWrapper from "../DarkModeWrapper.svelte";
 
   function logClicks(message) {

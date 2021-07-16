@@ -1,5 +1,5 @@
 <script>
-  import Button from "../Button.svelte";
+  import Button from "../components/Button.svelte";
 
   function toggleDarkMode() {
     document.querySelector("body").classList.toggle("dark-mode");
